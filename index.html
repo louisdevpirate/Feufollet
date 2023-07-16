@@ -1,60 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Feufollet</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 0;
-            margin: 0;
-        }
-        .section {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .fixed-bottom-nav {
-            position: fixed;
-            text-align: center;
-            bottom: 0;
-            width: 100%;
-            background-color: #f8f9fa;
-        }
-        .gallery {
-            display: flex;
-            justify-content: space-evenly;
-            margin-top: 50px;
-        }
-        .gallery div {
-            width: 200px;
-            height: 200px;
-            background-color: grey;
-            border: 1px solid #000;
-        }
-        .youtube {
-            display: flex;
-            justify-content: center;
-            margin-top: 50px;
-        }
-        .cta-button {
-            border-radius: 50px;
-            background-color: green;
-            border: none;
-            width: 200px;
-            height: 50px;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div id="hero" class="section">
-        <h1>Feufollet</h1>
-        <p>Bienvenue sur Feufollet, la boutique en ligne.</p>
-        <button class="cta-button">Découvrir <i class="fa-solid fa-chevron-right"></i></button>
+
+        <div class="intro">
+
+            <h1>Feufollet</h1>
+
+            <p>Bienvenue sur Feufollet, la boutique en ligne.</p>
+
+            <a href="#about"><button class="cta-button">Decouvrir <i class="fa-solid fa-chevron-right"></i></button></a>
+
+        </div>
+
+    </div>
+
+    </div>
+    <div id="about" class="section">
+        <h2>À propos</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt velit at ex pulvinar, a fermentum
+            lectus aliquam. Morbi quis tortor turpis. Nulla volutpat libero a mi lobortis, at facilisis turpis bibendum.
+            Sed auctor pulvinar massa eget lacinia. Fusce auctor egestas tortor, ac euismod erat. Vestibulum ut aliquet
+            ex, quis euismod risus. Maecenas vitae turpis vitae risus accumsan pretium. Curabitur at mi viverra,
+            sagittis elit sit amet, porta turpis.
+        </p>
+        <div class="youtube">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id" frameborder="0"
+                allowfullscreen></iframe>
+        </div>
     </div>
     <div id="boutique" class="section">
         <h2>Boutique</h2>
@@ -63,36 +45,28 @@
             <div></div>
             <div></div>
         </div>
-    </div>
-    <div id="about" class="section">
-        <h2>À propos</h2>
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt velit at ex pulvinar, a fermentum lectus aliquam. Morbi quis tortor turpis. Nulla volutpat libero a mi lobortis, at facilisis turpis bibendum. Sed auctor pulvinar massa eget lacinia. Fusce auctor egestas tortor, ac euismod erat. Vestibulum ut aliquet ex, quis euismod risus. Maecenas vitae turpis vitae risus accumsan pretium. Curabitur at mi viverra, sagittis elit sit amet, porta turpis.
-        </p>
-        <div class="youtube">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id" frameborder="0" allowfullscreen></iframe>
+        <div id="order" class="section">
+            <h2>Commandes</h2>
+            <p>
+                Pour passer une commande, veuillez sélectionner le tableau de votre choix, ajouter au panier et procéder
+                au paiement. Nous acceptons les cartes de crédit et PayPal comme modes de paiement.
+            </p>
+            <p>
+                Les frais de livraison seront calculés et ajoutés à votre total au moment du paiement. Si vous avez des
+                questions ou besoin d'assistance avec votre commande, n'hésitez pas à nous contacter.
+            </p>
         </div>
-    </div>
-    <div id="order" class="section">
-        <h2>Commandes</h2>
-        <p>
-            Pour passer une commande, veuillez sélectionner le tableau de votre choix, ajouter au panier et procéder au paiement. Nous acceptons les cartes de crédit et PayPal comme modes de paiement. 
-        </p>
-        <p>
-            Les frais de livraison seront calculés et ajoutés à votre total au moment du paiement. Si vous avez des questions ou besoin d'assistance avec votre commande, n'hésitez pas à nous contacter.
-        </p>
-    </div>
-    <div class="fixed-bottom-nav">
-        <nav class="center-text">
-            <a href="#hero">Accueil</a> |
-            <a href="#boutique">Boutique</a> |
-            <a href="#about">À propos</a> |
-            <a href="#order">Commandes</a>
-        </nav>
-    </div>
-    <footer class="center-text">
-        <p>&copy; 2023 Feufollet. Tous droits réservés.</p>
-    </footer>
+        <div class="fixed-bottom-nav">
+            <nav class="center-text">
+                <a href="#hero">Home</a> |
+                <a href="#about">About</a> |
+                <a href="#boutique">Shop</a> |
+                <a href="#order">Orders</a>
+            </nav>
+        </div>
+        <footer class="center-text">
+            <p>&copy; 2023 Feufollet. Tous droits réservés.</p>
+        </footer>
 </body>
-</html>
 
+</html>

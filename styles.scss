@@ -1,0 +1,175 @@
+// Variables
+$primary-color: #146829;
+$light-color: #f1f1f1;
+$dark-color: #333;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+@mixin flexbox-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(5%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        /* L'élément termine en haut */
+        opacity: 1;
+        /* L'élément est totalement opaque à la fin */
+    }
+}
+
+
+body {
+    font-family: 'Rubik', sans-serif;
+    color: $dark-color;
+    line-height: 1.5;
+    background-image: url(../Feufollet/images/paper.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left left;
+    background-size: cover;
+}
+
+// Structure générale
+.section {
+    padding: 20px;
+    height: 100vh;
+    @include flexbox-center();
+}
+
+// Bloc hero
+#hero {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slide-up 1s ease-out;
+
+    .intro {
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    .cta-button {
+        background-color: $primary-color;
+        color: white;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 50px;
+        height: 50px;
+        width: 200px;
+        cursor: pointer;
+        transition: background-color 0.5s ease;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+
+        i {
+            margin-left: 5px;
+        }
+    }
+}
+
+// Bloc à propos
+#about {
+    .youtube {
+        margin-top: 20px;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; // pour un ratio de 16:9
+        position: relative;
+
+        iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .youtube {
+
+        iframe {
+            width: 50%;
+        }
+
+    }
+}
+
+// Bloc boutique
+#boutique {
+    .gallery {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        div {
+            flex-basis: calc(33.3333% - 10px); // pour 3 colonnes
+            height: 200px;
+            background-color: $light-color;
+        }
+    }
+}
+
+// Navigation fixe en bas
+.fixed-bottom-nav {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%); // pour centrer l'élément
+    border-radius: 50px;
+    padding: 10px 20px;
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.7); // fond blanc semi-transparent
+    box-shadow: 0 2px 32px 0 rgba(31, 38, 135, 0.37); // ombre pour donner un effet de profondeur
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            margin: 0 10px;
+            color: $dark-color;
+            text-decoration: none;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+
+// Pied de page
+footer {
+    background-color: $dark-color;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}

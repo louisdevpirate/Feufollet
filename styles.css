@@ -1,0 +1,115 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+@keyframes slide-up {
+  0% {
+    transform: translateY(5%);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    /* L'élément termine en haut */
+    opacity: 1;
+    /* L'élément est totalement opaque à la fin */ } }
+
+body {
+  font-family: 'Rubik', sans-serif;
+  color: #333;
+  line-height: 1.5;
+  background-image: url(../Feufollet/images/paper.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: left left;
+  background-size: cover; }
+
+.section {
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+#hero {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slide-up 1s ease-out; }
+  #hero .intro {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  #hero h1 {
+    font-size: 4rem; }
+  #hero p {
+    margin-bottom: 20px; }
+  #hero .cta-button {
+    background-color: #146829;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    transition: background-color 0.5s ease; }
+    #hero .cta-button:hover {
+      background-color: #0c3d18; }
+    #hero .cta-button i {
+      margin-left: 5px; }
+
+#about .youtube {
+  margin-top: 20px;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative; }
+  #about .youtube iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+
+@media screen and (min-width: 992px) {
+  .youtube iframe {
+    width: 50%; } }
+
+#boutique .gallery {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px; }
+  #boutique .gallery div {
+    flex-basis: calc(33.3333% - 10px);
+    height: 200px;
+    background-color: #f1f1f1; }
+
+.fixed-bottom-nav {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50px;
+  padding: 10px 20px;
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 2px 32px 0 rgba(31, 38, 135, 0.37); }
+  .fixed-bottom-nav nav {
+    display: flex;
+    justify-content: space-between; }
+    .fixed-bottom-nav nav a {
+      margin: 0 10px;
+      color: #333;
+      text-decoration: none; }
+      .fixed-bottom-nav nav a:hover {
+        color: #146829; }
+
+footer {
+  background-color: #333;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 20px 0; }
