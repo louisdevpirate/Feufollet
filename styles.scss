@@ -2,6 +2,8 @@
 $primary-color: #146829;
 $light-color: #f1f1f1;
 $dark-color: #333;
+$secondary-titles: 3.5rem;
+
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
 @mixin flexbox-center {
@@ -35,6 +37,8 @@ body {
     background-attachment: fixed;
     background-position: left left;
     background-size: cover;
+    margin: 0;
+    padding: 0;
 }
 
 // Structure générale
@@ -42,6 +46,14 @@ body {
     padding: 20px;
     height: 100vh;
     @include flexbox-center();
+}
+
+h2 {
+    font-size: $secondary-titles;
+}
+
+p {
+    font-size: 1.1rem;
 }
 
 // Bloc hero
@@ -63,7 +75,7 @@ body {
     }
 
     h1 {
-        font-size: 4rem;
+        font-size: 5rem;
     }
 
     p {
@@ -94,6 +106,12 @@ body {
 
 // Bloc à propos
 #about {
+
+    p {
+        width: 80%;
+        font-size: 1.1rem;
+    }
+
     .youtube {
         margin-top: 20px;
         width: 100%;
@@ -109,17 +127,16 @@ body {
             left: 0;
         }
     }
-}
 
-@media screen and (min-width: 992px) {
-    .youtube {
-
-        iframe {
+    @media screen and (min-width: 992px) {
+        .youtube {
+            height: min-content;
             width: 50%;
         }
-
     }
 }
+
+
 
 // Bloc boutique
 #boutique {
@@ -143,6 +160,8 @@ body {
     left: 50%;
     transform: translateX(-50%); // pour centrer l'élément
     border-radius: 50px;
+    height: 50px;
+    @include flexbox-center();
     padding: 10px 20px;
     backdrop-filter: blur(2px);
     background-color: rgba(255, 255, 255, 0.7); // fond blanc semi-transparent
@@ -172,4 +191,6 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+    margin: 0;
+    bottom: 0;
 }
